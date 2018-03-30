@@ -1,0 +1,4 @@
+teams:
+  T01:
+    name: Team 1
+    rookie: true
