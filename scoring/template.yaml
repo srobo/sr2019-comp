@@ -1,15 +1,5 @@
 match_number: 0
 arena_id: main
-arena_zones:
-  0:
-    tokens: ''
-  1:
-    tokens: ''
-  2:
-    tokens: ''
-  3:
-    tokens: ''
-  other: {}
 teams:
   TLA1:
     zone: 0
@@ -27,3 +17,106 @@ teams:
     zone: 3
     disqualified: false
     present: true
+
+# we convert the arena from a grid (labelled here for convenience):
+#     1   2   3   4   5
+#   +---+---+---+---+---+
+# A |   |   |   |   |   |
+#   +---+---+---+---+---+
+# B |   |   |   |   |   |
+#   +---+---+---+---+---+
+# C |   |   |   |   |   |
+#   +---+---+---+---+---+
+# D |   |   |   |   |   |
+#   +---+---+---+---+---+
+# E |   |   |   |   |   |
+#   +---+---+---+---+---+
+#
+# into a list of lists. Each entry in the nested lists is a dictionary with the
+# following keys:
+#  * 'robots': Records the TLAs of the robots which were in the square at the
+#              end of the match. This is a list of robot TLAs, any TLA must be
+#              one of the teams which is recorded as being in the match.
+#  * 'tokens': Records the tokens which were in the square at the end of the
+#              match. This is a string of letters each representing a token by
+#              its colour. For example, PPO indicates two purple tokens and an
+#              orange token.
+
+arena_zones:
+  other:
+    zone_contents:
+      # row a
+      - - robots: []
+          tokens: ''
+          # col 2
+        - robots: []
+          tokens: ''
+          # col 3
+        - robots: []
+          tokens: ''
+          # col 4
+        - robots: []
+          tokens: ''
+          # col 5
+        - robots: []
+          tokens: ''
+      # row b
+      - - robots: []
+          tokens: ''
+          # col 2
+        - robots: []
+          tokens: ''
+          # col 3
+        - robots: []
+          tokens: ''
+          # col 4
+        - robots: []
+          tokens: ''
+          # col 5
+        - robots: []
+          tokens: ''
+      # row c
+      - - robots: []
+          tokens: ''
+          # col 2
+        - robots: []
+          tokens: ''
+          # col 3
+        - robots: []
+          tokens: ''
+          # col 4
+        - robots: []
+          tokens: ''
+          # col 5
+        - robots: []
+          tokens: ''
+      # row d
+      - - robots: []
+          tokens: ''
+          # col 2
+        - robots: []
+          tokens: ''
+          # col 3
+        - robots: []
+          tokens: ''
+          # col 4
+        - robots: []
+          tokens: ''
+          # col 5
+        - robots: []
+          tokens: ''
+      # row e
+      - - robots: []
+          tokens: ''
+          # col 2
+        - robots: []
+          tokens: ''
+          # col 3
+        - robots: []
+          tokens: ''
+          # col 4
+        - robots: []
+          tokens: ''
+          # col 5
+        - robots: []
+          tokens: ''
