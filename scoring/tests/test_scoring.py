@@ -10,25 +10,82 @@ sys.path.insert(0, ROOT)
 
 from score import Scorer, InvalidScoresheetException
 
+TEAMS_DATA =  {
+    'ABC': {'zone': 0},  # green
+    'DEF': {'zone': 1},  # orange
+    'GHI': {'zone': 2},  # purple
+}
+
 
 class ScorerTests(unittest.TestCase):
+    def construct_scorer(self, zone_contents):
+        return Scorer(TEAMS_DATA, {'other': {'zone_contents': zone_contents}})
+
+    def assertScores(self, expected_scores, zone_contents):
+        scorer = self.construct_scorer(self.zone_contents)
+        actual_scores = scorer.calculate_scores()
+
+        self.assertEqual(expected_scores, actual_scores, "Wrong scores")
+
+    def setUp(self):
+        self.zone_contents = [
+            [{'robots': [], 'tokens': ''} for _ in range(5)]
+            for _ in range(5)
+        ]
+
     def test_too_many_tokens_of_one_colour(self):
-        fail()
+        # There are a total of 10 tokens of each colour
+        self.zone_contents[0][0]['tokens'] = 'P' * 4
+        self.zone_contents[0][1]['tokens'] = 'P' * 4
+        self.zone_contents[1][1]['tokens'] = 'P' * 4
+
+        scorer = self.construct_scorer(self.zone_contents)
+
+        with self.assertRaises(InvalidScoresheetException):
+            scorer.validate(None)
 
     def test_invalid_token_colour(self):
-        fail()
+        self.zone_contents[0][0]['tokens'] = 'Q'
+
+        scorer = self.construct_scorer(self.zone_contents)
+
+        with self.assertRaises(InvalidScoresheetException):
+            scorer.validate(None)
 
     def test_unexpected_robot(self):
-        fail()
+        self.zone_contents[0][0]['robots'] = 'XYZ'
+
+        scorer = self.construct_scorer(self.zone_contents)
+
+        with self.assertRaises(InvalidScoresheetException):
+            scorer.validate(None)
 
     def test_single_token_on_base(self):
-        fail()
+        self.zone_contents[0][0]['tokens'] = 'G'
+
+        self.assertScores({
+            'ABC': 2,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_single_token_on_volcano(self):
-        fail()
+        self.zone_contents[1][1]['tokens'] = 'G'
+
+        self.assertScores({
+            'ABC': 7,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_single_token_in_caldera(self):
-        fail()
+        self.zone_contents[2][2]['tokens'] = 'G'
+
+        self.assertScores({
+            'ABC': 30,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_tied_zone(self):
         fail()
