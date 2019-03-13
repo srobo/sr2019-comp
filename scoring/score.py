@@ -68,7 +68,7 @@ class Scorer(object):
         for robot, count in robots.items():
             if count > 1:
                 raise InvalidScoresheetException(
-                    "{} appears {} times! (can only appear once)".format(
+                    "{} appears {} times! (can only appear at most once)".format(
                         robot,
                         count,
                     ),
