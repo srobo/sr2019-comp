@@ -55,7 +55,7 @@ class ScorerTests(unittest.TestCase):
             scorer.validate(None)
 
     def test_unexpected_robot(self):
-        self.zone_contents[0][0]['robots'] = 'XYZ'
+        self.zone_contents[0][0]['robots'] = ['XYZ']
 
         scorer = self.construct_scorer(self.zone_contents)
 
