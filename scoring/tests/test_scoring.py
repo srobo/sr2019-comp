@@ -243,6 +243,39 @@ class ScorerTests(unittest.TestCase):
             'GHI': 0,
         }, self.zone_contents)
 
+    def test_robot_doesnt_affect_zone_too_far_away_row(self):
+        self.zone_contents[0][4]['tokens'] = 'G'
+        self.zone_contents[0][0]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 2,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
+
+    def test_robot_doesnt_affect_zone_too_far_away_col(self):
+        self.zone_contents[4][0]['tokens'] = 'G'
+        self.zone_contents[0][0]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 2,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
+
+    def test_robot_doesnt_affect_zone_too_far_away(self):
+        self.zone_contents[0][2]['tokens'] = 'G'
+        self.zone_contents[2][0]['tokens'] = 'G'
+        self.zone_contents[2][4]['tokens'] = 'G'
+        self.zone_contents[4][2]['tokens'] = 'G'
+        self.zone_contents[2][2]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 8,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
+
     def test_robot_in_zone_affects_cardinal_points(self):
         # distribute owning of zones like so:
         # A B A
