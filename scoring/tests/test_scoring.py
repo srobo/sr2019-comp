@@ -60,6 +60,23 @@ class ScorerTests(unittest.TestCase):
         with self.assertRaises(InvalidScoresheetException):
             scorer.validate(None)
 
+    def test_wrong_number_rows(self):
+        del self.zone_contents[0]
+
+        scorer = self.construct_scorer(self.zone_contents)
+
+        with self.assertRaises(InvalidScoresheetException):
+            scorer.validate(None)
+
+    def test_wrong_number_cols(self):
+        for row in self.zone_contents:
+            del row[0]
+
+        scorer = self.construct_scorer(self.zone_contents)
+
+        with self.assertRaises(InvalidScoresheetException):
+            scorer.validate(None)
+
     def test_single_token_on_base(self):
         self.zone_contents[0][0]['tokens'] = 'G'
 

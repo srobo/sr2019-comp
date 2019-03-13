@@ -42,9 +42,19 @@ class Scorer(object):
         }
 
     def validate(self, extra):
+        if len(self._zone_contents) != 5:
+            raise InvalidScoresheetException(
+                "Wrong number of rows: {} != 5".format(len(self._zone_contents)),
+            )
+
         tokens = collections.Counter()
         robots = collections.Counter()
-        for row in self._zone_contents:
+        for idx, row in enumerate(self._zone_contents):
+            if len(row) != 5:
+                raise InvalidScoresheetException(
+                    "Wrong number of zones in row {}: {} != 5".format(idx, len(row)),
+                )
+
             for zone in row:
                 robots.update(zone['robots'])
                 tokens.update(zone['tokens'])
