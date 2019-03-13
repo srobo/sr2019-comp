@@ -62,6 +62,15 @@ class ScorerTests(unittest.TestCase):
         with self.assertRaises(InvalidScoresheetException):
             scorer.validate(None)
 
+    def test_robot_appears_twice(self):
+        self.zone_contents[0][0]['robots'] = ['ABC']
+        self.zone_contents[1][1]['robots'] = ['ABC']
+
+        scorer = self.construct_scorer(self.zone_contents)
+
+        with self.assertRaises(InvalidScoresheetException):
+            scorer.validate(None)
+
     def test_wrong_number_rows(self):
         del self.zone_contents[0]
 
