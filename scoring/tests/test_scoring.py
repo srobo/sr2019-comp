@@ -304,7 +304,24 @@ class ScorerTests(unittest.TestCase):
         }, self.zone_contents)
 
     def test_two_robots_in_same_zone(self):
-        fail()
+        self.zone_contents[1][1]['tokens'] = 'P'
+        self.zone_contents[1][1]['robots'] = ['ABC', 'DEF']
+
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+            'GHI': 63, # 7 * 3 * 3
+        }, self.zone_contents)
+
+    def test_three_robots_in_same_zone(self):
+        self.zone_contents[1][1]['tokens'] = 'P'
+        self.zone_contents[1][1]['robots'] = ['ABC', 'DEF', 'GHI']
+
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+            'GHI': 189, # 7 * 3 * 3 * 3
+        }, self.zone_contents)
 
     def test_two_robots_in_adjacent_zones(self):
         self.zone_contents[1][1]['tokens'] = 'P'
