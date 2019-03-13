@@ -18,6 +18,8 @@ TEAMS_DATA =  {
 
 
 class ScorerTests(unittest.TestCase):
+    longMessage = True
+
     def construct_scorer(self, zone_contents):
         return Scorer(TEAMS_DATA, {'other': {'zone_contents': zone_contents}})
 
@@ -105,56 +107,184 @@ class ScorerTests(unittest.TestCase):
         }, self.zone_contents)
 
     def test_tied_zone(self):
-        fail()
+        self.zone_contents[2][2]['tokens'] = 'GP'
+
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_two_tied_zones(self):
-        fail()
+        self.zone_contents[1][1]['tokens'] = 'GO'
+        self.zone_contents[2][2]['tokens'] = 'OP'
+
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
+
+    def test_two_tied_zones_and_an_untied_zone(self):
+        self.zone_contents[0][0]['tokens'] = 'G'
+        self.zone_contents[1][1]['tokens'] = 'GO'
+        self.zone_contents[2][2]['tokens'] = 'OP'
+
+        self.assertScores({
+            'ABC': 2,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
+
+    def test_number_of_tokens_in_zone_doesnt_affect_score(self):
+        self.zone_contents[0][0]['tokens'] = 'GGGGGGG'
+
+        self.assertScores({
+            'ABC': 2,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_robot_on_base_affecting_zone_on_base(self):
-        fail()
+        self.zone_contents[0][0]['tokens'] = 'G'
+        self.zone_contents[0][0]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 6,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_robot_on_volcano_affecting_zone_on_base(self):
-        fail()
+        self.zone_contents[1][0]['tokens'] = 'G'
+        self.zone_contents[1][1]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 6,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_robot_on_volcano_affecting_zone_on_volcano(self):
-        fail()
+        self.zone_contents[1][1]['tokens'] = 'G'
+        self.zone_contents[1][1]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 21,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_robot_on_volcano_affecting_zone_in_caldera(self):
-        fail()
+        self.zone_contents[2][2]['tokens'] = 'G'
+        self.zone_contents[1][2]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 90,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_robot_in_caldera_affecting_zone_in_caldera(self):
-        fail()
+        self.zone_contents[2][2]['tokens'] = 'G'
+        self.zone_contents[2][2]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 90,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_robot_in_zone_when_no_tokens(self):
-        fail()
+        self.zone_contents[1][1]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_robot_in_zone_owned_by_other_team(self):
-        fail()
+        self.zone_contents[1][1]['tokens'] = 'P'
+        self.zone_contents[1][1]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+            'GHI': 21,
+        }, self.zone_contents)
 
     def test_robot_affects_zone_to_side(self):
-        fail()
+        self.zone_contents[1][1]['tokens'] = 'G'
+        self.zone_contents[1][0]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 21,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_robot_doesnt_affect_zone_at_diagonal(self):
-        fail()
+        self.zone_contents[1][1]['tokens'] = 'G'
+        self.zone_contents[0][0]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 7,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_robot_in_zone_affects_cardinal_points(self):
         # distribute owning of zones like so:
         # A B A
         # B R B
         # A B A
-        # and check the resulting points for teams A and B
-        # Note: maybe override the points for each type of
-        # zone to be the same for this?
-        fail()
+        # we check the resulting points for teams A and B
+
+        self.zone_contents[1][1]['tokens'] = 'G'
+        self.zone_contents[1][2]['tokens'] = 'O'
+        self.zone_contents[1][3]['tokens'] = 'G'
+
+        self.zone_contents[2][1]['tokens'] = 'O'
+        self.zone_contents[2][2]['tokens'] = 'O'
+        self.zone_contents[2][3]['tokens'] = 'O'
+
+        self.zone_contents[3][1]['tokens'] = 'G'
+        self.zone_contents[3][2]['tokens'] = 'O'
+        self.zone_contents[3][3]['tokens'] = 'G'
+
+        self.zone_contents[2][2]['robots'] = ['ABC']
+
+        self.assertScores({
+            'ABC': 28,              # four corners on the volcano
+            'DEF': (28 + 30) * 3,   # four middles plus caldera
+            'GHI': 0,
+        }, self.zone_contents)
 
     def test_two_robots_in_same_zone(self):
         fail()
 
     def test_two_robots_in_adjacent_zones(self):
-        fail()
+        self.zone_contents[1][1]['tokens'] = 'P'
+        self.zone_contents[1][0]['robots'] = ['ABC']
+        self.zone_contents[1][1]['robots'] = ['DEF']
+
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+            'GHI': 63, # 7 * 3 * 3
+        }, self.zone_contents)
 
     def test_two_robots_in_diagonally_touching_zones(self):
-        fail()
+        self.zone_contents[1][1]['tokens'] = 'P'
+        self.zone_contents[0][0]['robots'] = ['ABC']
+        self.zone_contents[1][1]['robots'] = ['DEF']
+
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+            'GHI': 21,
+        }, self.zone_contents)
 
 
 if __name__ == '__main__':
