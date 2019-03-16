@@ -135,10 +135,10 @@ class Scorer(object):
 
             # Apply the 3 times multiplier for robots being in a given zone,
             # which applies to that zone and its cardinal direction zones.
-            score_mulitplier = ROBOT_MULTIPLIER ** num_robots
+            score_multiplier = ROBOT_MULTIPLIER ** num_robots
             for i, j in self.multipler_indices(row, col):
                 (owner, score) = zone_points[i][j]
-                zone_points[i][j] = (owner, score * score_mulitplier)
+                zone_points[i][j] = (owner, score * score_multiplier)
 
         # now add the robot multipliers
         for i, row in enumerate(self._zone_contents):
