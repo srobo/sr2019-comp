@@ -32,9 +32,6 @@ teams:
   DCG:
     name: Dr Challoner's Grammar School
     rookie: No
-  DOS:
-    name: D'Overbroecks School
-    rookie: Yes
   ELC:
     name: Eltham College
     rookie: Yes
