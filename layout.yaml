@@ -1,8 +1,9 @@
-# TODO: populate this with the real locations once we know which teams are going
-# to be placed in which shepherding areas.
+# TODO: put the teams in the proper locations once we know them. The team
+# locations here are placeholders for the right numbers.
 teams:
-  - name: the-cube
-    display_name: The Cube
+  - name: level-2-bar
+    display_name: Level 2 Bar
+    # T_1 to T_7 on the floorplans
     teams:
       - BLB
       - BMC
@@ -11,6 +12,10 @@ teams:
       - CAT
       - CCR
       - CGS
+  - name: level-3-south
+    display_name: Level 3 South
+    # T_8 to T_16 and T_19 on the floorplans
+    teams:
       - CHW
       - CLY
       - CRB
@@ -21,6 +26,10 @@ teams:
       - HAB
       - HAM
       - HRS
+  - name: level-3-north
+    display_name: Level 3 North
+    # T_17, T_18 and T_20 to T_26 on the floorplans
+    teams:
       - HSO
       - KDE
       - LSS
@@ -30,6 +39,10 @@ teams:
       - QMC
       - RDS
       - RGS
+  - name: level-4-concourse
+    display_name: Level 4 Concours
+    # T_27 to T_34 on the floorplans
+    teams:
       - RTS
       - SCS
       - SEN
