@@ -74,9 +74,6 @@ teams:
   RDS:
     name: Reading School
     rookie: Yes
-  RGS:
-    name: Royal Grammar School Guildford
-    rookie: No
   RTS:
     name: Ruthin School
     rookie: Yes
