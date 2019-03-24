@@ -36,11 +36,6 @@ class Scorer(object):
                     zone['tokens'].replace(' ', ''),
                 )
 
-        self._colour_to_team = {
-            self.ZONE_COLOURS[info['zone']]: tla
-            for tla, info in self._teams_data.items()
-        }
-
     def validate(self, extra):
         if len(self._zone_contents) != 5:
             raise InvalidScoresheetException(
@@ -147,12 +142,16 @@ class Scorer(object):
                 if num_robots:
                     apply_multiplier(i, j, num_robots)
 
-        scores = {tla: 0 for tla in self._teams_data.keys()}
+        scores_by_colour = {x: 0 for x in self.ZONE_COLOURS}
         for row in zone_points:
             for colour, score in row:
                 if colour is not None:
-                    scores[self._colour_to_team[colour]] += score
+                    scores_by_colour[colour] += score
 
+        scores = {
+            tla: scores_by_colour[self.ZONE_COLOURS[info['zone']]]
+            for tla, info in self._teams_data.items()
+        }
         return scores
 
 

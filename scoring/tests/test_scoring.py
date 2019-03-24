@@ -97,6 +97,25 @@ class ScorerTests(unittest.TestCase):
             'GHI': 0,
         }, self.zone_contents)
 
+    def test_token_colour_of_nonexistent_team_owns_zone(self):
+        for i, colour in enumerate('GOPY'):
+            self.zone_contents[i][0]['tokens'] = colour
+
+        self.assertScores({
+            'ABC': 2,
+            'DEF': 2,
+            'GHI': 2,
+        }, self.zone_contents)
+
+    def test_token_colour_of_nonexistent_team_owns_contested_zone(self):
+        self.zone_contents[0][0]['tokens'] = 'GYYY'
+
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
+
     def test_single_token_on_base(self):
         self.zone_contents[0][0]['tokens'] = 'G'
 
