@@ -88,6 +88,15 @@ class ScorerTests(unittest.TestCase):
         with self.assertRaises(InvalidScoresheetException):
             scorer.validate(None)
 
+    def test_token_colour_of_absent_team(self):
+        self.zone_contents[0][0]['tokens'] = 'GOPY'
+
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+            'GHI': 0,
+        }, self.zone_contents)
+
     def test_single_token_on_base(self):
         self.zone_contents[0][0]['tokens'] = 'G'
 
