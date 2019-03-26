@@ -2,9 +2,6 @@ teams:
   BLB:
     name: Bellerbys College Cambridge
     rookie: Yes
-  BMC:
-    name: Brampton College
-    rookie: Yes
   BPV:
     name: Barton Peveril College
     rookie: No

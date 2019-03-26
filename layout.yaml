@@ -33,7 +33,6 @@ teams:
       - TLC
       - CRB
       - SEN
-      - BMC
   - name: level-4-concourse
     display_name: Level 4 Concours
     # T_24 to T_31 on the floorplans
