@@ -10,7 +10,7 @@ teams:
       - SWI
   - name: level-3-south
     display_name: Level 3 South
-    # T_6 to T_14 and T_17 on the floorplans
+    # T_6 to T_13 and T_17 on the floorplans
     teams:
       - ELC
       - QMC
@@ -20,12 +20,12 @@ teams:
       - CLY
       - CAT
       - CHW
-      - HAB
       - BRK
   - name: level-3-north
     display_name: Level 3 North
-    # T_15, T_16 and T_18 to T_22 on the floorplans
+    # T_14 to T_16 and T_18 to T_22 on the floorplans
     teams:
+      - HAB
       - MES
       - CCR
       - SCS
