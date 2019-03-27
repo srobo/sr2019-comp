@@ -24,7 +24,7 @@ teams:
       - BRK
   - name: level-3-north
     display_name: Level 3 North
-    # T_15, T_16 and T_18 to T_23 on the floorplans
+    # T_15, T_16 and T_18 to T_22 on the floorplans
     teams:
       - MES
       - CCR
@@ -35,7 +35,7 @@ teams:
       - SEN
   - name: level-4-concourse
     display_name: Level 4 Concours
-    # T_24 to T_31 on the floorplans
+    # T_23 to T_30 on the floorplans
     teams:
       - DCG
       - GRD
