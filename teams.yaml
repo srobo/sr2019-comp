@@ -17,9 +17,6 @@ teams:
   CGS:
     name: Colston's Girls' School
     rookie: No
-  CHW:
-    name: The Cherwell School
-    rookie: No
   CLY:
     name: Collyers
     rookie: No
@@ -70,9 +67,6 @@ teams:
     rookie: No
   RDS:
     name: Reading School
-    rookie: Yes
-  RTS:
-    name: Ruthin School
     rookie: Yes
   SCS:
     name: Silcoates School
