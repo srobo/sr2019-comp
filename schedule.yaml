@@ -64,7 +64,11 @@ match_periods:
 tiebreaker: 2019-04-07 17:05:00+01:00
 #
 league:
-  extra_spacing: null
+  # Extra spacing which appears before (almost) everyone's first match
+  # Matches which fall at the start of their period are ignored
+  extra_spacing:
+  - match_numbers: 0-6
+    duration: 150
 #
 knockout:
   round_spacing: 300 # Delay between knockout rounds
