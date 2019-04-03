@@ -31,7 +31,9 @@ delays: []
 match_periods:
   league:
   - start_time: 2019-04-06 11:00:00+01:00
-    end_time: 2019-04-06 12:00:00+01:00
+    # Technically we stop at noon, but to force the next match
+    # into the next round we claim to finish a bit earlier.
+    end_time: 2019-04-06 11:55:00+01:00
     max_end_time: 2019-04-06 12:10:00+01:00
     description: Saturday league, morning
 
@@ -64,7 +66,11 @@ match_periods:
 tiebreaker: 2019-04-07 17:05:00+01:00
 #
 league:
-  extra_spacing: null
+  # Extra spacing which appears before (almost) everyone's first match
+  # Matches which fall at the start of their period are ignored
+  extra_spacing:
+  - match_numbers: 0-6
+    duration: 240
 #
 knockout:
   round_spacing: 300 # Delay between knockout rounds
