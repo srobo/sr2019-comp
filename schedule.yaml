@@ -26,7 +26,10 @@ staging:
 #
 timezone: Europe/London
 #
-delays: []
+delays:
+  # Add an extra space between the two semi-finals
+- delay: 300
+  time: 2019-04-07 15:54:00+01:00
 #
 match_periods:
   league:
