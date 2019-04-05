@@ -1,7 +1,6 @@
 teams:
   - name: level-2-bar
     display_name: Level 2 Bar
-    # T_1 to T_5 on the floorplans
     teams:
       - HSO
       - BPV
@@ -10,7 +9,6 @@ teams:
       - SWI
   - name: level-3-south
     display_name: Level 3 South
-    # T_6 to T_13 on the floorplans
     teams:
       - QMC
       - WGS
@@ -21,7 +19,6 @@ teams:
       - HAB
   - name: level-3-north
     display_name: Level 3 North
-    # T_14 to T_16 and T_18 to T_22 on the floorplans
     teams:
       - MES
       - CCR
@@ -33,7 +30,6 @@ teams:
       - BRK
   - name: level-4-concourse
     display_name: Level 4 Concours
-    # T_23 to T_29 on the floorplans
     teams:
       - DCG
       - GRD
