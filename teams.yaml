@@ -68,9 +68,6 @@ teams:
   RDS:
     name: Reading School
     rookie: Yes
-  SCS:
-    name: Silcoates School
-    rookie: No
   SEN:
     name: Southend High School for Boys
     rookie: No
