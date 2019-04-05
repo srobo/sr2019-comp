@@ -1,4 +1,3 @@
-# TODO: put the real schedule here (this is a placeholder based on a 36-team schedule)
 matches:
   0:
     main: [HSO, BPV, KDE, LSS]
@@ -15,222 +14,156 @@ matches:
   6:
     main: [HRS, MAI, PSC, RDS]
   7:
-    main: [null, null, null, null]
+    main: [HAM, QMC, BRK, CGS]
   8:
-    main: [null, null, null, null]
+    main: [GDC, WGS, BLB, HAB]
   9:
-    main: [HSO, BRK, SWI, GDC]
+    main: [MES, SCS, SEN, CRB]
   10:
-    main: [BPV, HAB, ELC, CGS]
+    main: [MAI, SWI, CAT, BPV]
   11:
-    main: [CLY, MES, KDE, QMC]
+    main: [LSS, CLY, KDE, HRS]
   12:
-    main: [CAT, CCR, LSS, WGS]
+    main: [DCG, PSC, GRD, CCR]
   13:
-    main: [SCS, SEN, HRS, null]
+    main: [TLC, RDS, ELC, HSO]
   14:
-    main: [BLB, DCG, MAI, null]
+    main: [MAI, SEN, DCG, HAB]
   15:
-    main: [TLC, GRD, PSC, null]
+    main: [HRS, QMC, PSC, ELC]
   16:
-    main: [CRB, HAM, RDS, null]
+    main: [CRB, BPV, CGS, SCS]
   17:
-    main: [HSO, null, null, GDC]
+    main: [RDS, KDE, LSS, TLC]
   18:
-    main: [BRK, null, null, SWI]
+    main: [WGS, CCR, HSO, CLY]
   19:
-    main: [BPV, CAT, SCS, QMC]
+    main: [GDC, HAM, BLB, GRD]
   20:
-    main: [CCR, KDE, SEN, ELC]
+    main: [SWI, CAT, BRK, MES]
   21:
-    main: [MES, HRS, LSS, CGS]
+    main: [QMC, HSO, RDS, DCG]
   22:
-    main: [CLY, HAB, null, WGS]
+    main: [HAM, WGS, CAT, CLY]
   23:
-    main: [BLB, GRD, RDS, null]
+    main: [KDE, SWI, CGS, CRB]
   24:
-    main: [TLC, DCG, null, null]
+    main: [CCR, TLC, MAI, MES]
   25:
-    main: [CRB, MAI, null, null]
+    main: [SCS, HAB, GDC, SEN]
   26:
-    main: [HAM, PSC, null, null]
+    main: [LSS, BPV, HRS, BLB]
   27:
-    main: [HSO, CCR, QMC, CGS]
+    main: [GRD, ELC, BRK, PSC]
   28:
-    main: [BPV, MES, SEN, GDC]
+    main: [RDS, TLC, MES, CRB]
   29:
-    main: [CAT, KDE, HRS, SWI]
+    main: [BLB, KDE, BRK, DCG]
   30:
-    main: [BRK, SCS, LSS, ELC]
+    main: [CAT, HRS, HSO, WGS]
   31:
-    main: [BLB, null, null, WGS]
+    main: [MAI, GDC, ELC, SWI]
   32:
-    main: [CLY, CRB, GRD, null]
+    main: [SCS, GRD, HAM, CGS]
   33:
-    main: [HAB, TLC, RDS, null]
+    main: [HAB, CCR, SEN, QMC]
   34:
-    main: [DCG, PSC, null, null]
+    main: [PSC, CLY, LSS, BPV]
   35:
-    main: [HAM, MAI, null, null]
+    main: [HAB, CCR, KDE, GDC]
   36:
-    main: [HSO, CAT, MES, ELC]
+    main: [BRK, GRD, QMC, RDS]
   37:
-    main: [BLB, HRS, QMC, GDC]
+    main: [BLB, HRS, CAT, SEN]
   38:
-    main: [SEN, null, SWI, CGS]
+    main: [DCG, PSC, BPV, MAI]
   39:
-    main: [BPV, CLY, CCR, null]
+    main: [HSO, ELC, HAM, WGS]
   40:
-    main: [BRK, CRB, KDE, WGS]
+    main: [CRB, CLY, TLC, SWI]
   41:
-    main: [HAB, GRD, MAI, LSS]
+    main: [MES, LSS, SCS, CGS]
   42:
-    main: [SCS, RDS, null, null]
+    main: [ELC, CRB, MAI, HSO]
   43:
-    main: [TLC, HAM, null, null]
+    main: [LSS, DCG, HRS, RDS]
   44:
-    main: [DCG, PSC, null, null]
+    main: [CLY, BRK, SWI, PSC]
   45:
-    main: [HSO, CLY, BLB, SEN]
+    main: [KDE, GRD, WGS, HAM]
   46:
-    main: [GRD, null, ELC, GDC]
+    main: [CGS, TLC, HAB, SEN]
   47:
-    main: [CAT, HAB, HAM, null]
+    main: [QMC, GDC, BLB, CAT]
   48:
-    main: [MES, CRB, null, SWI]
+    main: [CCR, BPV, MES, SCS]
   49:
-    main: [BRK, MAI, null, QMC]
+    main: [WGS, SEN, DCG, TLC]
   50:
-    main: [BPV, HRS, null, WGS]
+    main: [CLY, QMC, CAT, HSO]
   51:
-    main: [SCS, KDE, null, CGS]
+    main: [SWI, PSC, CRB, GRD]
   52:
-    main: [CCR, RDS, LSS, null]
+    main: [BRK, MAI, GDC, RDS]
   53:
-    main: [TLC, DCG, PSC, null]
+    main: [BLB, SCS, CCR, CGS]
   54:
-    main: [HSO, GRD, null, null]
+    main: [ELC, LSS, HAB, BPV]
   55:
-    main: [CLY, HAM, HRS, ELC]
+    main: [MES, KDE, HAM, HRS]
   56:
-    main: [CAT, BRK, BLB, null]
+    main: [CRB, GDC, HSO, BLB]
   57:
-    main: [HAB, CRB, SEN, QMC]
+    main: [LSS, RDS, MAI, SWI]
   58:
-    main: [SCS, MAI, WGS, GDC]
+    main: [BPV, CAT, SCS, ELC]
   59:
-    main: [BPV, PSC, null, SWI]
+    main: [SEN, HAM, TLC, QMC]
   60:
-    main: [MES, DCG, null, null]
+    main: [PSC, CGS, MES, KDE]
   61:
-    main: [TLC, KDE, null, CGS]
+    main: [DCG, WGS, CCR, HAB]
   62:
-    main: [CCR, RDS, LSS, null]
+    main: [GRD, HRS, CLY, BRK]
   63:
-    main: [BLB, null, null, ELC]
+    main: [KDE, MAI, SCS, QMC]
   64:
-    main: [BRK, GRD, HRS, null]
+    main: [RDS, MES, WGS, LSS]
   65:
-    main: [CLY, DCG, null, SWI]
+    main: [HRS, GRD, CCR, TLC]
   66:
-    main: [PSC, LSS, null, QMC]
+    main: [CGS, HAM, CRB, CLY]
   67:
-    main: [HSO, HAB, SCS, null]
+    main: [ELC, BRK, GDC, BLB]
   68:
-    main: [CAT, TLC, SEN, MAI]
+    main: [HSO, HAB, BPV, CAT]
   69:
-    main: [HAM, RDS, WGS, GDC]
+    main: [PSC, DCG, SWI, SEN]
   70:
-    main: [BPV, CRB, null, null]
+    main: [BPV, CCR, RDS, KDE]
   71:
-    main: [MES, CCR, KDE, CGS]
+    main: [SCS, CLY, HRS, BLB]
   72:
-    main: [CLY, BRK, PSC, null]
+    main: [CAT, HSO, DCG, MAI]
   73:
-    main: [BLB, HAM, LSS, SWI]
+    main: [WGS, LSS, SEN, BRK]
   74:
-    main: [DCG, RDS, null, ELC]
+    main: [GRD, MES, SWI, HAB]
   75:
-    main: [MES, SCS, GRD, null]
+    main: [QMC, TLC, CRB, GDC]
   76:
-    main: [SEN, null, null, WGS]
+    main: [PSC, ELC, CGS, HAM]
   77:
-    main: [CCR, null, null, GDC]
+    main: [TLC, SEN, HRS, BRK]
   78:
-    main: [TLC, HRS, MAI, null]
+    main: [CLY, SWI, GRD, HSO]
   79:
-    main: [CAT, HAB, CRB, CGS]
+    main: [BPV, CRB, QMC, KDE]
   80:
-    main: [HSO, BPV, KDE, QMC]
+    main: [CGS, RDS, HAB, PSC]
   81:
-    main: [CCR, SCS, null, LSS]
+    main: [GDC, SCS, ELC, CCR]
   82:
-    main: [MES, TLC, null, null]
+    main: [MAI, WGS, DCG, MES]
   83:
-    main: [BRK, RDS, null, CGS]
-  84:
-    main: [HAB, BLB, KDE, PSC]
-  85:
-    main: [HSO, DCG, HRS, MAI]
-  86:
-    main: [BPV, GRD, null, QMC]
-  87:
-    main: [SEN, null, ELC, GDC]
-  88:
-    main: [CLY, CAT, HAM, null]
-  89:
-    main: [CRB, null, SWI, WGS]
-  90:
-    main: [BPV, CCR, DCG, null]
-  91:
-    main: [KDE, null, null, null]
-  92:
-    main: [TLC, PSC, null, CGS]
-  93:
-    main: [MES, HAM, RDS, LSS]
-  94:
-    main: [HAB, CRB, HRS, SWI]
-  95:
-    main: [GRD, MAI, null, null]
-  96:
-    main: [CLY, BRK, SEN, WGS]
-  97:
-    main: [HSO, CAT, SCS, GDC]
-  98:
-    main: [BLB, null, ELC, QMC]
-  99:
-    main: [CCR, KDE, MAI, SWI]
-  100:
-    main: [LSS, null, null, WGS]
-  101:
-    main: [CAT, DCG, null, null]
-  102:
-    main: [BPV, TLC, HAM, PSC]
-  103:
-    main: [RDS, null, null, CGS]
-  104:
-    main: [CLY, CRB, ELC, GDC]
-  105:
-    main: [MES, HRS, null, null]
-  106:
-    main: [HSO, HAB, SEN, GRD]
-  107:
-    main: [BRK, SCS, BLB, QMC]
-  108:
-    main: [TLC, KDE, null, GDC]
-  109:
-    main: [CAT, MES, LSS, null]
-  110:
-    main: [CCR, PSC, null, CGS]
-  111:
-    main: [BPV, DCG, RDS, QMC]
-  112:
-    main: [HSO, SCS, HAM, MAI]
-  113:
-    main: [HAB, GRD, HRS, null]
-  114:
-    main: [CLY, SEN, null, null]
-  115:
-    main: [BRK, BLB, CRB, null]
-  116:
-    main: [null, SWI, ELC, WGS]
+    main: [CAT, BLB, HAM, LSS]
