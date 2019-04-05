@@ -12,25 +12,25 @@ teams:
     display_name: Level 3 South
     # T_6 to T_13 on the floorplans
     teams:
-      - ELC
       - QMC
       - WGS
       - GDC
       - CGS
       - CLY
       - CAT
-      - BRK
+      - HAB
   - name: level-3-north
     display_name: Level 3 North
     # T_14 to T_16 and T_18 to T_22 on the floorplans
     teams:
-      - HAB
       - MES
       - CCR
       - BLB
       - TLC
       - CRB
       - SEN
+      - ELC
+      - BRK
   - name: level-4-concourse
     display_name: Level 4 Concours
     # T_23 to T_29 on the floorplans
