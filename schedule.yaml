@@ -35,20 +35,24 @@ match_periods:
   league:
   - start_time: 2019-04-06 11:00:00+01:00
     # Technically we stop at noon, but to force the next match
-    # into the next round we claim to finish a bit earlier.
+    # into the next period we claim to finish a bit earlier.
     end_time: 2019-04-06 11:55:00+01:00
     max_end_time: 2019-04-06 12:10:00+01:00
     description: Saturday league, morning
 
 #
   - start_time: 2019-04-06 13:00:00+01:00
+    # Technically we stop at 17:30, but to force the next match
+    # into the next period we claim to finish a bit earlier.
     end_time: 2019-04-06 17:30:00+01:00
     max_end_time: 2019-04-06 17:40:00+01:00
     description: Saturday league, afternoon
 
 #
   - start_time: 2019-04-07 10:30:00+01:00
-    end_time: 2019-04-07 12:00:00+01:00
+    # Technically we stop at noon, but to force the next match
+    # into the next period we claim to finish a bit earlier.
+    end_time: 2019-04-07 11:55:00+01:00
     max_end_time: 2019-04-07 12:10:00+01:00
     description: Sunday league, morning
 
@@ -74,6 +78,12 @@ league:
   extra_spacing:
   - match_numbers: 0-6
     duration: 240
+  # Spacing between rounds (Saturday)
+  - match_numbers: 14,21,28,35,42,49
+    duration: 300
+  # Spacing between rounds (Sunday)
+  - match_numbers: 56,63,70,77
+    duration: 600
 #
 knockout:
   round_spacing: 300 # Delay between knockout rounds
