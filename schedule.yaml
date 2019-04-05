@@ -1,7 +1,7 @@
 match_slot_lengths:
   pre: 90
-  match: 180
-  post: 30
+  match: 150
+  post: 60
   total: 300
 #
 # Various staging related times, in seconds before the actual match start
