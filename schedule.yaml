@@ -30,6 +30,8 @@ delays:
   # Add an extra space between the two semi-finals
 - delay: 300
   time: 2019-04-07 15:54:00+01:00
+- delay: 360
+  time: 2019-04-06 13:05:00+01:00
 #
 match_periods:
   league:
