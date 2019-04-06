@@ -34,6 +34,8 @@ delays:
   time: 2019-04-06 13:05:00+01:00
 - delay: 360
   time: 2019-04-06 14:55:00+01:00
+- delay: 240
+  time: 2019-04-06 14:22:00+01:00
 #
 match_periods:
   league:
