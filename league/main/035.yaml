@@ -1,0 +1,72 @@
+arena_id: main
+arena_zones:
+  other:
+    zone_contents:
+    - - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+    - - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+    - - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+    - - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+    - - robots: []
+        tokens: YYYYYY
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: PPPPPPP
+match_number: 35
+teams:
+  BLB:
+    disqualified: false
+    present: false
+    zone: 1
+  BPV:
+    disqualified: false
+    present: true
+    zone: 2
+  GDC:
+    disqualified: false
+    present: true
+    zone: 3
+  MES:
+    disqualified: false
+    present: false
+    zone: 0
