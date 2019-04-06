@@ -56,12 +56,12 @@ arena_zones:
 match_number: 3
 teams:
   BLB:
-    disqualified: true
-    present: true
-    zone: 3
-  CCR:
     disqualified: false
     present: false
+    zone: 3
+  CCR:
+    disqualified: true
+    present: true
     zone: 2
   HAB:
     disqualified: false

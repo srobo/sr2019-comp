@@ -61,11 +61,11 @@ teams:
     zone: 1
   ELC:
     disqualified: false
-    present: false
+    present: true
     zone: 3
   SEN:
     disqualified: false
-    present: true
+    present: false
     zone: 2
   TLC:
     disqualified: false

@@ -56,7 +56,7 @@ match_number: 0
 teams:
   BPV:
     disqualified: false
-    present: false
+    present: true
     zone: 2
   HSO:
     disqualified: false
@@ -64,5 +64,5 @@ teams:
     zone: 1
   KDE:
     disqualified: false
-    present: true
+    present: false
     zone: 3

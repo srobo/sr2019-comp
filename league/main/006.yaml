@@ -65,9 +65,9 @@ teams:
     zone: 1
   PSC:
     disqualified: false
-    present: false
+    present: true
     zone: 2
   RDS:
     disqualified: false
-    present: true
+    present: false
     zone: 3

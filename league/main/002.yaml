@@ -58,7 +58,7 @@ match_number: 2
 teams:
   CAT:
     disqualified: false
-    present: true
+    present: false
     zone: 3
   CGS:
     disqualified: false
@@ -66,7 +66,7 @@ teams:
     zone: 1
   CLY:
     disqualified: false
-    present: false
+    present: true
     zone: 2
   GDC:
     disqualified: false
