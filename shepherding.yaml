@@ -1,14 +1,14 @@
 # TODO: match the colours to the actual colours in SUSU
 shepherds:
   - name: "Shepherd Level 2 Bar"
-    colour: 'yellow'
+    colour: 'mediumpurple'
     regions: [level-2-bar]
   - name: "Shepherd Level 3 South"
-    colour: 'red'
+    colour: 'lightgreen'
     regions: [level-3-south]
   - name: "Shepherd Level 3 North"
-    colour: 'blue'
+    colour: 'lightblue'
     regions: [level-3-north]
   - name: "Shepherd Level 4 Concours"
-    colour: 'green'
+    colour: 'palevioletred'
     regions: [level-4-concourse]
