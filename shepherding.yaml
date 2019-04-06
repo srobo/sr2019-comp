@@ -9,6 +9,6 @@ shepherds:
   - name: "Shepherd Level 3 North"
     colour: 'lightblue'
     regions: [level-3-north]
-  - name: "Shepherd Level 4 Concours"
+  - name: "Shepherd Level 4 Concourse"
     colour: 'palevioletred'
     regions: [level-4-concourse]
