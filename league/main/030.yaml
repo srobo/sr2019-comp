@@ -60,7 +60,7 @@ teams:
     present: true
     zone: 0
   HRS:
-    disqualified: false
+    disqualified: true
     present: true
     zone: 1
   WGS:
