@@ -63,7 +63,7 @@ teams:
     present: true
     zone: 1
   HRS:
-    disqualified: false
+    disqualified: true
     present: true
     zone: 3
   KDE:
