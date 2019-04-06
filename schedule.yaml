@@ -29,7 +29,7 @@ timezone: Europe/London
 delays:
   # Add an extra space between the two semi-finals
 - delay: 300
-  time: 2019-04-07 15:54:00+01:00
+  time: 2019-04-07 16:14:00+01:00
 - delay: 360
   time: 2019-04-06 13:05:00+01:00
 - delay: 360
@@ -48,29 +48,25 @@ match_periods:
 
 #
   - start_time: 2019-04-06 13:00:00+01:00
-    # Technically we stop at 17:30, but to force the next match
-    # into the next period we claim to finish a bit earlier.
-    end_time: 2019-04-06 17:30:00+01:00
-    max_end_time: 2019-04-06 17:50:00+01:00
+    end_time: 2019-04-06 17:10:00+01:00
+    max_end_time: 2019-04-06 17:15:00+01:00
     description: Saturday league, afternoon
 
 #
   - start_time: 2019-04-07 10:30:00+01:00
-    # Technically we stop at noon, but to force the next match
-    # into the next period we claim to finish a bit earlier.
     end_time: 2019-04-07 11:55:00+01:00
     max_end_time: 2019-04-07 12:10:00+01:00
     description: Sunday league, morning
 
 #
   - start_time: 2019-04-07 13:00:00+01:00
-    end_time: 2019-04-07 14:30:00+01:00
+    end_time: 2019-04-07 14:15:00+01:00
     description: Sunday league, afternoon
 #
 # There is a group photograph scheduled for 14:30
 #
   knockout:
-  - start_time: 2019-04-07 14:40:00+01:00
+  - start_time: 2019-04-07 15:00:00+01:00
     end_time: 2019-04-07 16:55:00+01:00
     description: Knockouts
 #
@@ -88,7 +84,7 @@ league:
   - match_numbers: 14,21,28,35,42,49
     duration: 300
   # Spacing between rounds (Sunday)
-  - match_numbers: 56,63,70,77
+  - match_numbers: 56,63,70
     duration: 600
 #
 knockout:

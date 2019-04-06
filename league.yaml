@@ -153,17 +153,3 @@ matches:
     main: [QMC, SEN, ELC, GDC]
   76:
     main: [PSC, SWI, CGS, HAM]
-  77:
-    main: [SEN, BRK, HRS, HAB]
-  78:
-    main: [CLY, LSS, GRD, null]
-  79:
-    main: [HSO, ELC, QMC, BPV]
-  80:
-    main: [CGS, RDS, MES, PSC]
-  81:
-    main: [GDC, TLC, SWI, BLB]
-  82:
-    main: [MAI, WGS, DCG, CCR]
-  83:
-    main: [CAT, CRB, HAM, KDE]
