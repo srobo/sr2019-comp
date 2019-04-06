@@ -32,7 +32,7 @@ teams:
       - ELC
       - BRK
   - name: level-4-concourse
-    display_name: Level 4 Concours
+    display_name: Level 4 Concourse
     # T_23 to T_29 on the floorplans
     teams:
       - DCG
