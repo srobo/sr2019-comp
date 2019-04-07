@@ -60,7 +60,7 @@ teams:
     present: true
     zone: 0
   CLY:
-    disqualified: false
+    disqualified: true
     present: true
     zone: 2
   PSC:
