@@ -1,0 +1,33 @@
+#!/bin/bash -e
+
+KNOCKOUTS_PERIOD=4
+
+mkdir -p printing
+
+printer="srcomp print-schedule $(dirname $0) --period $KNOCKOUTS_PERIOD"
+
+# $printer --output printing/knockout-all-colours.pdf
+# $printer --plain --output printing/knockout-plain.pdf
+for i in `seq 0 3`
+do
+	$printer -s $i --output printing/knockout-shepherd-$i.pdf
+done
+
+	# printing/knockout-all-colours.pdf \
+	# printing/knockout-plain.pdf \
+pdfjam --outfile printing/knockouts.pdf \
+	printing/knockout-shepherd-*.pdf
+
+evince printing/knockouts.pdf
+
+echo '-------'
+echo -n "Print document? [Y/n]: "
+read do_print
+if [ -z "$do_print" ] || [ "$do_print" == "Y" ] || [ "$do_print" == "y" ]
+then
+	echo "Printing knockouts.pdf"
+	if [ "$1" != "--dry-run" ]
+	then
+		lp printing/knockouts.pdf
+	fi
+fi
