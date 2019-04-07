@@ -1,0 +1,74 @@
+arena_id: main
+arena_zones:
+  other:
+    zone_contents:
+    - - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+    - - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+    - - robots:
+        - RDS
+        tokens: G
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+    - - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: Y
+      - robots: []
+        tokens: Y
+      - robots: []
+        tokens: ''
+    - - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots:
+        - MAI
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+match_number: 79
+teams:
+  BLB:
+    disqualified: false
+    present: false
+    zone: 1
+  HAB:
+    disqualified: false
+    present: true
+    zone: 2
+  MAI:
+    disqualified: false
+    present: true
+    zone: 3
+  RDS:
+    disqualified: false
+    present: true
+    zone: 0
