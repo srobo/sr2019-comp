@@ -1,0 +1,76 @@
+arena_id: main
+arena_zones:
+  other:
+    zone_contents:
+    - - robots: []
+        tokens: ''
+      - robots: []
+        tokens: OO
+      - robots:
+        - MAI
+        tokens: ''
+      - robots: []
+        tokens: O
+      - robots: []
+        tokens: ''
+    - - robots:
+        - RDS
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+    - - robots: []
+        tokens: GGG
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+    - - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: PP
+    - - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots: []
+        tokens: ''
+      - robots:
+        - DCG
+        tokens: YYPP
+      - robots:
+        - GDC
+        tokens: ''
+match_number: 86
+teams:
+  DCG:
+    disqualified: false
+    present: true
+    zone: 3
+  GDC:
+    disqualified: false
+    present: true
+    zone: 2
+  MAI:
+    disqualified: false
+    present: true
+    zone: 1
+  RDS:
+    disqualified: false
+    present: true
+    zone: 0
