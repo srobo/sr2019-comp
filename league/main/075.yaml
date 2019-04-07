@@ -62,7 +62,7 @@ teams:
     present: true
     zone: 2
   GDC:
-    disqualified: false
+    disqualified: true
     present: true
     zone: 3
   QMC:
