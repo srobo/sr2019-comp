@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+git pull wasp master
+
+srcomp awards $(dirname $0)
