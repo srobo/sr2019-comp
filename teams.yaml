@@ -15,10 +15,10 @@ teams:
     name: Cirencester 6th Form College
     rookie: No
   CGS:
-    name: Colston's Girls' School
+    name: Ratatouille
     rookie: No
   CLY:
-    name: Collyers
+    name: Team Vulcan
     rookie: No
   CRB:
     name: Cranbrook School
@@ -36,7 +36,7 @@ teams:
     name: Gordano School
     rookie: No
   HAB:
-    name: Haberdashers' Aske's Boys' School
+    name: Humuhumunukunukuāpuaa
     rookie: Yes
   HAM:
     name: Hampton School
@@ -69,7 +69,7 @@ teams:
     name: Reading School
     rookie: Yes
   SEN:
-    name: Southend High School for Boys
+    name: TOBOR
     rookie: No
   SWI:
     name: South Wilts Grammar School
