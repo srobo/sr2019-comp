@@ -26,7 +26,7 @@ class ScorerTests(unittest.TestCase):
         return Scorer(TEAMS_DATA, {'other': {'zone_contents': zone_contents}})
 
     def assertScores(self, expected_scores, zone_contents):
-        scorer = self.construct_scorer(self.zone_contents)
+        scorer = self.construct_scorer(zone_contents)
         actual_scores = scorer.calculate_scores()
 
         self.assertEqual(expected_scores, actual_scores, "Wrong scores")
