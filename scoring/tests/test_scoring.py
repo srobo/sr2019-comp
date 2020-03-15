@@ -2,6 +2,8 @@
 
 import unittest
 
+import yaml
+
 # Path hackery
 import os.path
 import sys
@@ -34,6 +36,19 @@ class ScorerTests(unittest.TestCase):
             [{'robots': [], 'tokens': ''} for _ in range(5)]
             for _ in range(5)
         ]
+
+    def test_template(self):
+        with open(os.path.join(ROOT, 'template.yaml')) as f:
+            data = yaml.load(f)
+
+        teams_data = data['teams']
+        arena_data = data.get('arena_zones')
+        extra_data = data.get('other')
+
+        scorer = Scorer(teams_data, arena_data)
+        scorer.calculate_scores()
+
+        scorer.validate(extra_data)
 
     def test_too_many_tokens_of_one_colour(self):
         # There are a total of 10 tokens of each colour
